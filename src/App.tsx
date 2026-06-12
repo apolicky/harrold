@@ -94,6 +94,9 @@ export default function App() {
           </div>
         )}
       </main>
+      <footer className="app-footer">
+        <a href="https://github.com/apolicky/saml-roles-from-har-file#readme" target="_blank" rel="noreferrer">README</a>
+      </footer>
     </div>
   )
 }
