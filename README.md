@@ -1,4 +1,4 @@
-# SAML Roles from HAR File
+# Harrold - SAML Roles from HAR File
 
 A client-side tool for inspecting SAML responses captured in HAR network traces. Useful for debugging Keycloak SAML broker flows where Entra ID is the identity provider.
 
