@@ -58,7 +58,7 @@ export default function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>SAML Roles from HAR</h1>
+        <h1>Harrold - SAML Roles from HAR</h1>
         {state.phase !== 'idle' && (
           <button className="reset-btn" onClick={reset}>Load another file</button>
         )}
@@ -95,7 +95,7 @@ export default function App() {
         )}
       </main>
       <footer className="app-footer">
-        <a href="https://github.com/apolicky/saml-roles-from-har-file#readme" target="_blank" rel="noreferrer">README</a>
+        <a href="https://github.com/apolicky/harrold#readme" target="_blank" rel="noreferrer">README</a>
       </footer>
     </div>
   )
