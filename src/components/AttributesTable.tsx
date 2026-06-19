@@ -7,13 +7,13 @@ interface Props {
 export function AttributesTable({ attributes }: Props) {
   return (
     <section className="panel">
-      <h2>All Claims <span className="badge">{attributes.length}</span></h2>
+      <h2>all claims <span className="badge">{attributes.length}</span></h2>
       <div className="table-wrap">
         <table className="claims-table">
           <thead>
             <tr>
-              <th>Attribute Name</th>
-              <th>Values</th>
+              <th>attribute name</th>
+              <th>values</th>
             </tr>
           </thead>
           <tbody>

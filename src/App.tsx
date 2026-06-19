@@ -58,9 +58,9 @@ export default function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>Harrold - SAML Roles from HAR</h1>
+        <h1><img src="./img/harrold-192.png" alt="" style={{ height: '2em', verticalAlign: 'middle', marginRight: '0.4em' }} />Harrold - SAML Roles from HAR</h1>
         {state.phase !== 'idle' && (
-          <button className="reset-btn" onClick={reset}>Load another file</button>
+          <button className="reset-btn" onClick={reset}>load another file</button>
         )}
       </header>
 
@@ -69,8 +69,8 @@ export default function App() {
 
         {state.phase === 'error' && (
           <div className="error-box">
-            <strong>Error:</strong> {state.message}
-            <button className="reset-btn" onClick={reset}>Try again</button>
+            <strong>error:</strong> {state.message}
+            <button className="reset-btn" onClick={reset}>try again</button>
           </div>
         )}
 
@@ -84,9 +84,13 @@ export default function App() {
         {state.phase === 'result' && (
           <div className="results">
             <div className="result-meta">
-              <span className="meta-label">File:</span> {state.filename}
-              <span className="meta-sep">·</span>
-              <span className="meta-label">Endpoint:</span> <code>{state.url}</code>
+              <div>
+                <span className="meta-label">file:</span> <code>{state.filename}</code>
+              
+              </div>
+              <div>
+                <span className="meta-label">endpoint:</span> <code>{state.url}</code>
+              </div>
             </div>
             <RolesList roles={state.result.roles} />
             <AttributesTable attributes={state.result.attributes} />

@@ -16,9 +16,9 @@ export function XmlViewer({ xml }: Props) {
   return (
     <section className="panel panel--xml">
       <div className="panel-header">
-        <h2>Raw XML</h2>
+        <h2>raw XML</h2>
         <button className="copy-btn" onClick={copy}>
-          {copied ? 'Copied!' : 'Copy'}
+          {copied ? 'copied!' : 'copy'}
         </button>
       </div>
       <pre className="xml-pre"><code>{xml}</code></pre>
