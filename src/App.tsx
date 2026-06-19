@@ -58,7 +58,7 @@ export default function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1><img src="./img/harrold-192.png" alt="" style={{ height: '2em', verticalAlign: 'middle', marginRight: '0.4em' }} />Harrold - SAML Roles from HAR</h1>
+        <h1><img src={`${import.meta.env.BASE_URL}img/harrold-192.png`} alt="" style={{ height: '2em', verticalAlign: 'middle', marginRight: '0.4em' }} />Harrold - SAML Roles from HAR</h1>
         {state.phase !== 'idle' && (
           <button className="reset-btn" onClick={reset}>load another file</button>
         )}
