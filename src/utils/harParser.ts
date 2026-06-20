@@ -32,8 +32,6 @@ interface Har {
   log: HarLog
 }
 
-const BROKER_ENDPOINT_RE = /\/broker\/[^/]+\/endpoint/
-
 function extractSamlResponse(postData: HarPostData): string | null {
   if (postData.params) {
     const param = postData.params.find((p) => p.name === 'SAMLResponse')
@@ -63,7 +61,6 @@ export function parseHar(text: string): HarSamlEntry[] {
   for (const entry of har.log.entries) {
     const req = entry.request
     if (req.method !== 'POST') continue
-    if (!BROKER_ENDPOINT_RE.test(req.url)) continue
     if (!req.postData) continue
 
     const samlResponseRaw = extractSamlResponse(req.postData)

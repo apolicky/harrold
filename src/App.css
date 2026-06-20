@@ -28,6 +28,8 @@ body {
 }
 
 .app-header h1 {
+  display: flex;
+  flex-direction: row;
   font-size: 1.5rem;
   font-weight: 900;
   font-family: 'Comic Sans MS', 'Comic Sans', cursive;
@@ -39,6 +41,31 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: rainbow-shift 2s linear infinite;
+}
+
+.header-logo-wrap {
+  height: 2em;
+  width: 2em;
+  margin-right: 0.4em;
+  background-color: white;
+  display: block;
+  flex-shrink: 0;
+}
+
+.header-logo {
+  height: inherit;
+  vertical-align: middle;
+}
+
+.header-title {
+  margin: auto;
+}
+
+.app-tagline {
+  color: #666;
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
 }
 
 /* Upload zone */
